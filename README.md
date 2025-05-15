@@ -1,10 +1,14 @@
 # Welcome to your Expo app 👋
 
-Guide: https://www.youtube.com/watch?v=BaYzZyWm8EI
+Guide: <https://www.youtube.com/watch?v=BaYzZyWm8EI>
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Get started
+
+If you have still not installed expo yet, just execute this first on your local pc
+
+```bash npm install --global expo-cli ```
 
 1. Install dependencies
 
