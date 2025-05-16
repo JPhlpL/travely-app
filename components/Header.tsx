@@ -3,16 +3,14 @@ import { Colors } from "@/constants/Colors"
 import { useThemeToggle } from "@/hooks/useThemeToggle"
 import { useRouter } from "expo-router"
 import { Platform, StyleSheet, Switch, TouchableOpacity, View } from "react-native"
-import { ThemedText } from "./ThemedText"
 import { ThemedView } from "./ThemedView"
 import { IconSymbol } from "./ui/IconSymbol"
 
 type HeaderProps = {
-  title?: string
   showBackButton?: boolean
 }
 
-export default function Header({ title = "Travely", showBackButton = false }: HeaderProps) {
+export default function Header({ showBackButton = false }: HeaderProps) {
   const { isDarkMode, toggleTheme } = useThemeToggle()
   const router = useRouter()
 
@@ -29,7 +27,6 @@ export default function Header({ title = "Travely", showBackButton = false }: He
             />
           </TouchableOpacity>
         )}
-        <ThemedText type="subtitle">{title}</ThemedText>
       </View>
 
       <View style={styles.themeToggle}>

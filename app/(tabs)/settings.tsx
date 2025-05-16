@@ -8,7 +8,7 @@ import { ThemedView } from "@/components/ThemedView"
 export default function SettingsScreen() {
   return (
     <ParallaxScrollView>
-      <Header title="Settings" />
+      <Header/>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">This is Settings Page</ThemedText>
       </ThemedView>

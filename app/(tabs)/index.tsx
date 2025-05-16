@@ -8,7 +8,7 @@ import { ThemedView } from "@/components/ThemedView"
 export default function HomeScreen() {
   return (
     <ParallaxScrollView>
-      <Header title="Home" />
+      <Header/>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">This is Home Page</ThemedText>
       </ThemedView>
