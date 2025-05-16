@@ -34,7 +34,7 @@ export default function Header({ title = "Travely", showBackButton = false }: He
 
       <View style={styles.themeToggle}>
         <IconSymbol 
-          name={isDarkMode ? "moon.fill" : "sun.max.fill"} 
+          name={isDarkMode ? "sun.max.fill" : "sun.max.fill"} 
           size={20} 
           color={isDarkMode ? Colors.dark.icon : Colors.light.icon} 
         />
@@ -50,7 +50,8 @@ export default function Header({ title = "Travely", showBackButton = false }: He
           style={styles.switch}
         />
         <IconSymbol 
-          name={isDarkMode ? "moon.stars.fill" : "sun.max.fill"} 
+         
+          name={isDarkMode ? "moon.stars.fill" : "moon.stars.fill"} 
           size={20} 
           color={isDarkMode ? Colors.dark.icon : Colors.light.icon} 
         />
