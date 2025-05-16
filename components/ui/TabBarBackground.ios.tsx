@@ -1,22 +1,15 @@
+// This is a shim for web and Android where the tab bar is generally opaque.
 import { useThemeToggle } from "@/hooks/useThemeToggle"
-import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs"
-import { BlurView } from "expo-blur"
-import { StyleSheet } from "react-native"
+import { StyleSheet, View } from "react-native"
 
-export default function BlurTabBarBackground() {
+export default function TabBarBackground() {
   const { isDarkMode } = useThemeToggle()
 
   return (
-    <BlurView
-      // System chrome material automatically adapts to the system's theme
-      // and matches the native tab bar appearance on iOS.
-      tint={isDarkMode ? "dark" : "light"}
-      intensity={100}
-      style={StyleSheet.absoluteFill}
-    />
+    <View style={[StyleSheet.absoluteFill, { backgroundColor: isDarkMode ? "#0d0d0d" : "#d9d9d9" }]} />
   )
 }
 
 export function useBottomTabOverflow() {
-  return useBottomTabBarHeight()
+  return 0
 }

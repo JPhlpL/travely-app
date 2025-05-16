@@ -22,12 +22,16 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
+            // Use solid background in dark mode, transparent in light mode
             position: "absolute",
-            backgroundColor: isDarkMode ? "rgba(21, 23, 24, 0.8)" : "rgba(255, 255, 255, 0.8)",
+            backgroundColor: isDarkMode ? "#000000" : "rgba(255, 255, 255, 0.8)",
+            borderTopColor: isDarkMode ? "#000000" : "#e5e5e5",
+            borderTopWidth: isDarkMode ? 0 : 0.5,
           },
           default: {
-            backgroundColor: isDarkMode ? Colors.dark.background : Colors.light.background,
+            backgroundColor: isDarkMode ? "#000000" : Colors.light.background,
+            borderTopColor: isDarkMode ? "#000000" : "#e5e5e5",
+            borderTopWidth: isDarkMode ? 0 : 0.5,
           },
         }),
       }}

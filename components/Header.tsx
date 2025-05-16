@@ -43,9 +43,9 @@ export default function Header({ title = "Travely", showBackButton = false }: He
           onValueChange={toggleTheme}
           trackColor={{
             false: Platform.OS === "ios" ? "#e9e9ea" : "#767577",
-            true: Platform.OS === "ios" ? "#0a7ea4" : "#0a7ea4",
+            true: Platform.OS === "ios" ? "#0da3d4" : "#0da3d4",
           }}
-          thumbColor={Platform.OS === "ios" ? "#ffffff" : isDarkMode ? "#f5f5f5" : "#f4f3f4"}
+          thumbColor={Platform.OS === "ios" ? "#e5e5e5" : isDarkMode ? "#f5f5f5" : "#f4f3f4"}
           ios_backgroundColor="#e9e9ea"
           style={styles.switch}
         />
